@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "batchtracking": {
+    "dataSource": "psql",
+    "public": true
+  },
+  "launchpointcase": {
+    "dataSource": "psql",
+    "public": true
+  },
+  "casetracking": {
+    "dataSource": "psql",
+    "public": true
+  },
+  "iqtracking": {
+    "dataSource": "psql",
+    "public": false
+  },
+  "isotracking": {
+    "dataSource": "psql",
+    "public": false
+  },
+  "isoresponsetracking": {
+    "dataSource": "psql",
+    "public": false
+  }
+}

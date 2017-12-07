@@ -1,0 +1,12 @@
+{
+  "psql": {
+    "host": "bpms.everteam.us",
+    "port": 5432,
+    "url": "postgres://bam:everteam@bpms.everteam.us:5432/bamdb",
+    "database": "bamdb",
+    "password": "everteam",
+    "name": "psql",
+    "user": "bam",
+    "connector": "postgresql"
+  }
+}

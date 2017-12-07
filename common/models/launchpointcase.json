@@ -1,0 +1,392 @@
+{
+  "name": "launchpointcase",
+  "options": {
+    "idInjection": false,
+    "postgresql": {
+      "schema": "public",
+      "table": "launchpointcase"
+    }
+  },
+  "properties": {
+    "caseid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "caseid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "clientid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "clientid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "isoindicator": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "isoindicator",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "score": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "score",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "accidentdate": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "accidentdate",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "benefitamount": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "benefitamount",
+        "dataType": "numeric",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "fundingsource": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "fundingsource",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "lob": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "lob",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "workcomp": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "workcomp",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "casestatus": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casestatus",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "lifecycle": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "lifecycle",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "closereason": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "closereason",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "state": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "state",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "casesource": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casesource",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "environmentid": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "environmentid",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "iqresponsereceived": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "iqresponsereceived",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "canclose": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "canclose",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "belowcosteffectivepursuit": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "belowcosteffectivepursuit",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "iqreturnmail": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "iqreturnmail",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "created_at": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "created_at",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "updated_at": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "updated_at",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "created_by_process": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "created_by_process",
+        "dataType": "character varying",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "created_by_instance": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 64,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "created_by_instance",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 64,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "batchid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "batchid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "casetrackings": {
+      "type": "hasMany",
+      "model": "casetracking",
+      "foreignKey": "caseid"
+    },
+    "iqtrackings": {
+      "type": "hasMany",
+      "model": "iqtracking",
+      "foreignKey": "caseid"
+    },
+    "isotrackings": {
+      "type": "hasMany",
+      "model": "isotracking",
+      "foreignKey": "caseid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
