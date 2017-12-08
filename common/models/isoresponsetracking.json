@@ -398,5 +398,9 @@
         "nullable": "YES"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }

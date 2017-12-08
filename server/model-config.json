@@ -27,14 +27,18 @@
   },
   "iqtracking": {
     "dataSource": "psql",
-    "public": false
+    "public": true
   },
   "isotracking": {
     "dataSource": "psql",
-    "public": false
+    "public": true
   },
   "isoresponsetracking": {
     "dataSource": "psql",
-    "public": false
+    "public": true
+  },
+  "executionerror": {
+    "dataSource": "psql",
+    "public": true
   }
 }
