@@ -9,6 +9,7 @@
   },
   "properties": {
     "caseid": {
+      "id": 1,
       "type": "Number",
       "required": false,
       "length": null,
@@ -24,6 +25,7 @@
       }
     },
     "clientid": {
+      "id": 2,
       "type": "Number",
       "required": false,
       "length": null,
@@ -31,6 +33,37 @@
       "scale": 0,
       "postgresql": {
         "columnName": "clientid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "batchid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "batchid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "environmentid": {
+      "id": 3,
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "environmentid",
         "dataType": "integer",
         "dataLength": null,
         "dataPrecision": 32,
@@ -158,6 +191,21 @@
         "nullable": "YES"
       }
     },
+    "casesource": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casesource",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
     "lifecycle": {
       "type": "String",
       "required": false,
@@ -203,36 +251,6 @@
         "nullable": "YES"
       }
     },
-    "casesource": {
-      "type": "String",
-      "required": false,
-      "length": 250,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "casesource",
-        "dataType": "character varying",
-        "dataLength": 250,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "environmentid": {
-      "type": "String",
-      "required": false,
-      "length": 250,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "environmentid",
-        "dataType": "character varying",
-        "dataLength": 250,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
     "iqresponsereceived": {
       "type": "Boolean",
       "required": false,
@@ -263,14 +281,14 @@
         "nullable": "YES"
       }
     },
-    "belowcosteffectivepursuit": {
+    "bcep": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "belowcosteffectivepursuit",
+        "columnName": "bcep",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -286,6 +304,156 @@
       "scale": null,
       "postgresql": {
         "columnName": "iqreturnmail",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "invalidaddress": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "invalidaddress",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "iqhold": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "iqhold",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "isosent": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "isosent",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "isoresponse": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "isoresponse",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "vip": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "vip",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "iqletters": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "iqletters",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "dayssinceaccident": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "dayssinceaccident",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "bcepduedatepassed": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "bcepduedatepassed",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "dayssincelastiqletter": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "dayssincelastiqletter",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "active": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "active",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -326,13 +494,13 @@
     "created_by_process": {
       "type": "String",
       "required": false,
-      "length": null,
+      "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
         "columnName": "created_by_process",
         "dataType": "character varying",
-        "dataLength": null,
+        "dataLength": 250,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
@@ -342,25 +510,10 @@
       "type": "Number",
       "required": false,
       "length": null,
-      "precision": 64,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "created_by_instance",
-        "dataType": "bigint",
-        "dataLength": null,
-        "dataPrecision": 64,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
-    "batchid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
       "precision": 32,
       "scale": 0,
       "postgresql": {
-        "columnName": "batchid",
+        "columnName": "created_by_instance",
         "dataType": "integer",
         "dataLength": null,
         "dataPrecision": 32,
@@ -368,30 +521,5 @@
         "nullable": "YES"
       }
     }
-  },
-  "validations": [],
-  "relations": {
-    "casetrackings": {
-      "type": "hasMany",
-      "model": "casetracking",
-      "foreignKey": "caseid"
-    },
-    "iqtrackings": {
-      "type": "hasMany",
-      "model": "iqtracking",
-      "foreignKey": "caseid"
-    },
-    "isotrackings": {
-      "type": "hasMany",
-      "model": "isotracking",
-      "foreignKey": "caseid"
-    },
-    "executionerrors": {
-      "type": "hasMany",
-      "model": "executionerror",
-      "foreignKey": "caseid"
-    }
-  },
-  "acls": [],
-  "methods": {}
+  }
 }

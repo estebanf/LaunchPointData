@@ -263,15 +263,5 @@
         "nullable": "YES"
       }
     }
-  },
-  "validations": [],
-  "relations": {
-    "launchpointcase": {
-      "type": "belongsTo",
-      "model": "launchpointcase",
-      "foreignKey": "caseid"
-    }
-  },
-  "acls": [],
-  "methods": {}
+  }
 }
