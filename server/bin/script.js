@@ -18,7 +18,7 @@ function callback(err, schema) {
   }
   console.log("Auto discovery for schema " + schema.name);
   /*
-  * Convert schema name from CamelCase to dashed lowercase (loopback format 
+  * Convert schema name from CamelCase to dashed lowercase (loopback format
   * for json files describing models), for example: CamelCase -> camel-case.
   */
   //var model_name = schema.name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();

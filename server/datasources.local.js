@@ -1,11 +1,11 @@
 module.exports = {
   psql: {
-      host: process.env.DBHOST || "bpms.everteam.us",
+      host: process.env.DBHOST || "everteampostdb.crfk3ijcwlp6.us-east-1.rds.amazonaws.com",
       port: process.env.DBPORT || 5432,
-      url: process.env.DBURL || "postgres://bam:everteam@bpms.everteam.us:5432/bamdb",
-      database: process.env.DB || "bamdb",
-      password: process.env.DBPASSWORD || "everteam",
-      user: process.env.DBUSER || "bam",
+      url: process.env.DBURL || "postgres://EverTeamDBDeveloper:EverTeamDBDeveloper@everteampostdb.crfk3ijcwlp6.us-east-1.rds.amazonaws.com:5432/EverTeamPostDB",
+      database: process.env.DB || "EverTeamPostDB",
+      password: process.env.DBPASSWORD || "EverTeamDBDeveloper",
+      user: process.env.DBUSER || "EverTeamDBDeveloper",
       connector: "postgresql"
     }
 }

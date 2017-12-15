@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LaunchpointData">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Launchpoint data</title>
+    <script src="https://use.fontawesome.com/12f3a27d98.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+  <!-- Page Content -->
+<div class="container" ng-controller="LpCasesController as vm">
+    <div class="row">
+      <table datatable="ng" class="row-border hover">
+        <thead>
+            <tr>
+                <th>Case</th>
+                <th>Client</th>
+                <th>Environment</th>
+                <th></th>
+              </tr>
+        </thead>
+        <tr ng-repeat="lpcase in vm.lpcases">
+          <td>{{lpcase.caseid}}</td>
+          <td>{{lpcase.clientid}}</td>
+          <td>{{lpcase.environmentid}}</td>
+          <td><button class="btn btn-default"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+        </tr>
+      </table>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.7/angular-resource.min.js"></script>
+<script src="js/vendor/angular-datatables.min.js"></script>
+<script src="js/lb-services.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

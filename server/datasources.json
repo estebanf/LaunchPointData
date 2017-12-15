@@ -1,12 +1,12 @@
 {
   "psql": {
-    "host": "bpms.everteam.us",
+    "host": "everteampostdb.crfk3ijcwlp6.us-east-1.rds.amazonaws.com",
     "port": 5432,
-    "url": "postgres://bam:everteam@bpms.everteam.us:5432/bamdb",
-    "database": "bamdb",
-    "password": "everteam",
+    "url": "postgres://everteampostdb.crfk3ijcwlp6.us-east-1.rds.amazonaws.com:5432/EverTeamPostDB",
+    "database": "EverTeamPostDB",
+    "password": "EverTeamDBDeveloper",
     "name": "psql",
-    "user": "bam",
+    "user": "EverTeamDBDeveloper",
     "connector": "postgresql"
   }
 }
