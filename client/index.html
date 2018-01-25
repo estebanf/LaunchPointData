@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="LaunchpointData">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -27,11 +27,11 @@
         }
     </style>
 </head>
-<body>
+<body ng-app="LaunchpointData">
   <!-- Page Content -->
-<div class="container" ng-controller="LpCasesController as vm">
+<div class="container-fluid" ng-controller="LpCasesController">
     <div class="row">
-      <table datatable="ng" class="row-border hover">
+      <!-- <table datatable="ng" class="row-border hover">
         <thead>
             <tr>
                 <th>Case</th>
@@ -46,7 +46,25 @@
           <td>{{lpcase.environmentid}}</td>
           <td><button class="btn btn-default"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
         </tr>
-      </table>
+      </table> -->
+      <div class="col-lg-2">
+        {{ctrl.search.caseid}}
+        <form class="form">
+          <div class="form-group">
+            <label for="txtCaseId">Case Id</label>
+            <input type="email" class="form-control" id="txtCaseId" placeholder="CaseId" ng-model="search.caseid"/>
+          </div>
+          <div class="form-group">
+            <label for="txtClientId">Client Id</label>
+            <input type="email" class="form-control" id="txtClientId" placeholder="ClientId" ng-model="search.clientid"/>
+          </div>
+          <div class="form-group">
+            <label for="txtEnvId">EnvironmentId Id</label>
+            <input type="email" class="form-control" id="txtEnvId" placeholder="EnvironmentId" ng-model="search.environmentid"/>
+          </div>
+          <button type="button" class="btn btn-default" ng-click="find()">Search</button>
+        </form>
+      </div>
     </div>
     <!-- /.row -->
 </div>

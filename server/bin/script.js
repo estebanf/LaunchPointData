@@ -99,6 +99,8 @@ function main() {
       if (param11 === '-ds' && param21 === '-sn' && datasource_json.hasOwnProperty(datasource)) {
         options = {};
         options.nameMapper = mapName;
+        console.log(datasource);
+        console.log(datasource_json[datasource])
         var ds = app.createDataSource(datasource, datasource_json[datasource]);
         ds.discoverSchema(schema_name, options, callback);
       } else {

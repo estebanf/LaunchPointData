@@ -9,6 +9,7 @@
   },
   "properties": {
     "caseid": {
+      "id": 1,
       "type": "Number",
       "required": false,
       "length": null,
@@ -24,6 +25,7 @@
       }
     },
     "clientid": {
+      "id": 2,
       "type": "Number",
       "required": false,
       "length": null,
@@ -31,21 +33,6 @@
       "scale": 0,
       "postgresql": {
         "columnName": "clientid",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": 32,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
-    "environmentid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 32,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "environmentid",
         "dataType": "integer",
         "dataLength": null,
         "dataPrecision": 32,
@@ -61,6 +48,22 @@
       "scale": 0,
       "postgresql": {
         "columnName": "batchid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "environmentid": {
+      "id": 3,
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "environmentid",
         "dataType": "integer",
         "dataLength": null,
         "dataPrecision": 32,

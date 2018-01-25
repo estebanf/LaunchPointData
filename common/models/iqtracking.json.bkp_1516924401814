@@ -1,25 +1,25 @@
 {
-  "name": "executionerror",
+  "name": "iqtracking",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
-      "table": "executionerror"
+      "table": "iqtracking"
     }
   },
   "properties": {
     "id": {
-      "type": "String",
+      "type": "Number",
       "required": false,
-      "length": 250,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
       "postgresql": {
         "columnName": "id",
-        "dataType": "character varying",
-        "dataLength": 250,
-        "dataPrecision": null,
-        "dataScale": null,
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
         "nullable": "YES"
       }
     },
@@ -68,29 +68,14 @@
         "nullable": "YES"
       }
     },
-    "failcount": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 32,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "failcount",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": 32,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
-    "technicalerror": {
+    "iqreceived": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "technicalerror",
+        "columnName": "iqreceived",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -98,29 +83,29 @@
         "nullable": "YES"
       }
     },
-    "step": {
+    "iqreceivedat": {
       "type": "String",
       "required": false,
-      "length": 250,
+      "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "step",
-        "dataType": "character varying",
-        "dataLength": 250,
+        "columnName": "iqreceivedat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
       }
     },
-    "resolved": {
+    "iqenqueued": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "resolved",
+        "columnName": "iqenqueued",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -128,14 +113,29 @@
         "nullable": "YES"
       }
     },
-    "integration": {
+    "iqenqueuedat": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "iqenqueuedat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "iqdequeued": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "integration",
+        "columnName": "iqdequeued",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -143,14 +143,29 @@
         "nullable": "YES"
       }
     },
-    "validation": {
+    "iqdequeuedat": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "iqdequeuedat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "iqsent": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "validation",
+        "columnName": "iqsent",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -158,15 +173,15 @@
         "nullable": "YES"
       }
     },
-    "message": {
-      "type": "Boolean",
+    "iqsentat": {
+      "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "message",
-        "dataType": "boolean",
+        "columnName": "iqsentat",
+        "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,

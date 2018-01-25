@@ -98,51 +98,6 @@
         "nullable": "YES"
       }
     },
-    "haschanges": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "haschanges",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "ruleexecuted": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "ruleexecuted",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "ruleexecutedat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "ruleexecutedat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
     "isoindicatorchanged": {
       "type": "Boolean",
       "required": false,
@@ -1268,14 +1223,14 @@
         "nullable": "YES"
       }
     },
-    "iq": {
+    "sendtoiso": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "iq",
+        "columnName": "sendtoiso",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -1283,14 +1238,14 @@
         "nullable": "YES"
       }
     },
-    "iso": {
+    "sendtoiq": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "iso",
+        "columnName": "sendtoiq",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -1298,59 +1253,14 @@
         "nullable": "YES"
       }
     },
-    "stop": {
+    "dropcase": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "stop",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "closecase": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "closecase",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "sendiso": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "sendiso",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "sendiq": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "sendiq",
+        "columnName": "dropcase",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -1373,6 +1283,21 @@
         "nullable": "YES"
       }
     },
+    "closecase": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "closecase",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
     "donothing": {
       "type": "Boolean",
       "required": false,
@@ -1382,201 +1307,6 @@
       "postgresql": {
         "columnName": "donothing",
         "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "discriminationruleid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 32,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "discriminationruleid",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": 32,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
-    "isoruleid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 32,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "isoruleid",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": 32,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
-    "iqruleid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 32,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "iqruleid",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": 32,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
-    "senttoiso": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttoiso",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttoisoat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttoisoat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttoiq": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttoiq",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttoiqat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttoiqat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttoiqhold": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttoiqhold",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttoiqholdat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttoiqholdat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttoclosecase": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttoclosecase",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttoclosecaseat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttoclosecaseat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttodropcase": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttodropcase",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "senttodropcaseat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "senttodropcaseat",
-        "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,
