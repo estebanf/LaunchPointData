@@ -9,6 +9,7 @@
   },
   "properties": {
     "caseid": {
+      "id":"1",
       "type": "Number",
       "required": false,
       "length": null,
@@ -24,6 +25,7 @@
       }
     },
     "clientid": {
+      "id":"2",
       "type": "Number",
       "required": false,
       "length": null,
@@ -39,6 +41,7 @@
       }
     },
     "environmentid": {
+      "id":"3",
       "type": "Number",
       "required": false,
       "length": null,
