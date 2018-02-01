@@ -9,6 +9,7 @@
   },
   "properties": {
     "id": {
+      "id":1,
       "type": "Number",
       "required": false,
       "length": null,
