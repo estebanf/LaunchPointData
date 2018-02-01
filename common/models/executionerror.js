@@ -1,19 +1,10 @@
 'use strict';
 var request = require('request');
 var config = require('../../server/config.local');
-// require('request-debug')(request);
-var baseObject = {
-  'proc:Receive_recover_signalRequest': {
-    '@xmlns': {
-      proc: 'http://bpms.everteam.com/Processes/',
-      laun: 'http://www.example.org/Launchpoint'
-    },
-    'laun:recoverId': {
-      $: ''
-    }
-  }
-}
+require('request-debug')(request);
+
 var baseEndpoint = config.bpms + '/ode/processes/LaunchPointProcess_Processes_'
+
 var types = {
   BUSINESSRULE: {endpoint:'BusinessRules_ExecutionRules_process_ExceptionManagement',ns:'BusinessRules/ExecutionRules/process'},
   CASECLOSEREOPEN: {endpoint:'Integrations_CaseCloseReopen_process_Exception_Management',ns:'Integrations/CaseCloseReopen/process'},
@@ -35,16 +26,23 @@ var types = {
 }
 function sendRecover(key,id,cb){
   var params = types[key];
-  var body = Object.assign({}, baseObject);
-  body['proc:Receive_recover_signalRequest']['@xmlns'].proc = body['proc:Receive_recover_signalRequest']['@xmlns'].proc + params.ns
-  body['proc:Receive_recover_signalRequest']['laun:recoverId'].$ = id + ''
   request({
     method:'POST',
     url: baseEndpoint + params.endpoint,
     headers: {
       'Content-Type':'application/json/badgerfish'
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify({
+      'proc:Receive_recover_signalRequest': {
+        '@xmlns': {
+          proc: 'http://bpms.everteam.com/Processes/' + params.ns,
+          laun: 'http://www.example.org/Launchpoint'
+        },
+        'laun:recoverId': {
+          $: id + ''
+        }
+      }
+    })
   },function(error,response,body){
     cb(null,JSON.parse(body));
   })
