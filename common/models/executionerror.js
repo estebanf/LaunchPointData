@@ -1,7 +1,7 @@
 'use strict';
 var request = require('request');
 var config = require('../../server/config.local');
-require('request-debug')(request);
+// require('request-debug')(request);
 
 var baseEndpoint = config.bpms + '/ode/processes/LaunchPointProcess_Processes_'
 
