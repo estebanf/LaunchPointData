@@ -44,7 +44,9 @@ function sendRecover(key,id,cb){
       }
     })
   },function(error,response,body){
-    cb(null,JSON.parse(body));
+    if(cb){
+      cb(null,JSON.parse(body));
+    }
   })
 }
 module.exports=function(executionerror) {
@@ -68,15 +70,21 @@ module.exports=function(executionerror) {
       cb(null,results)
     })
   }
+  executionerror.resolveAll = function(cb){
+    executionerror.find({where:{and: [{technicalerror:false},{resolved:false}]}},function(err,results){
+      cb(null,{});
+      results.forEach(function(item){
+        console.log("sendRecover(" + item.step + "," + item.id)
+        // sendRecover(item.step,item.id);
+      })
+    })
+  }
   executionerror.recover = function(id,cb){
     executionerror.findById(id,function(err,obj){
       if(!obj.resolved){
         sendRecover(obj.step,id,cb);
       }
     })
-    // executionerror.find({where:{and: [{technicalerror:false},{resolved:true}]}},function(err,results){
-    //   cb(null,results)
-    // })
   }
   executionerror.remoteMethod('getActiveTechnical',{
     http: { verb: 'get'},
@@ -93,6 +101,10 @@ module.exports=function(executionerror) {
   executionerror.remoteMethod('getResolvedFunctional',{
     http: { verb: 'get'},
     returns: {arg: 'results',type :'executionerrors'}
+  })
+  executionerror.remoteMethod('resolveAll',{
+    http: { verb: 'get'},
+    returns: {arg: 'results',type :'Object'}
   })
   executionerror.remoteMethod('recover',{
     accepts:{arg:'id',type:'number'},
