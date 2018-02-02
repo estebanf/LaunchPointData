@@ -26,6 +26,7 @@ var types = {
 }
 function sendRecover(key,id,cb){
   var params = types[key];
+  console.log('Recover started for instance: ' + id);
   request({
     method:'POST',
     url: baseEndpoint + params.endpoint,
@@ -44,9 +45,19 @@ function sendRecover(key,id,cb){
       }
     })
   },function(error,response,body){
-    if(cb){
-      cb(null,JSON.parse(body));
+    if(error){
+	console.log(error);
+        console.log('Recover failed for instance: ' + id);
+	if(cb){
+		cb(error);
+	}
     }
+    else {
+    	console.log('Recover success for instance: ' + id)
+	if(cb){
+      		cb(null,JSON.parse(body));
+    	}
+	}
   })
 }
 module.exports=function(executionerror) {
@@ -71,11 +82,12 @@ module.exports=function(executionerror) {
     })
   }
   executionerror.resolveAll = function(cb){
-    executionerror.find({where:{and: [{technicalerror:false},{resolved:false}]}},function(err,results){
-      cb(null,{});
+    executionerror.find({where:{and: [{technicalerror:true},{resolved:false}]}},function(err,results){
+      cb(null,results);
+      console.log('Starting recovery for ' + results.length + ' instances');
       results.forEach(function(item){
-        console.log("sendRecover(" + item.step + "," + item.id)
-        // sendRecover(item.step,item.id);
+        //console.log("sendRecover(" + item.step + "," + item.id)
+        sendRecover(item.step,item.id);
       })
     })
   }
